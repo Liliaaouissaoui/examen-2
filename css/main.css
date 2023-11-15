@@ -3,6 +3,7 @@
 // ==================================== */
 
 :root {
+  --primair-site: #ac8968;
 }
 
 /* ====================================
@@ -49,4 +50,89 @@ video {
   max-inline-size: 100%;
   block-size: auto;
   vertical-align: middle;
+}
+
+.page-header {
+  background: #ac8968;
+}
+
+h1 {
+  color: white;
+  font-size: 20px;
+  font-family: Catchye Demo;
+  font-weight: 700;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+}
+
+h2 {
+  font-family: Catchye Demo;
+  color: #9b7451;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 70px;
+  }
+}
+
+.grand-rectangle-apropos {
+  border-radius: 64px;
+  background: var(--primair-site, rgba(191, 146, 104, 0.62));
+  padding: 81px 47px;
+}
+
+@media (min-width: 768px) {
+  .grand-rectangle-apropos {
+    padding: 35px 47px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grand-rectangle-apropos {
+    padding: 81px 47px;
+  }
+}
+
+.grand-rectangle-apropos p {
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41px;
+}
+
+.page-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffe0c3 50%,
+    #9b7451 100%
+  );
 }
