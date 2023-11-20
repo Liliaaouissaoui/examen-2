@@ -8,7 +8,7 @@
 
 /* ====================================
 // reset rules
-// ==================================== */
+// ====================faudra faire plusieurs css================ */
 
 * {
   box-sizing: border-box;
@@ -24,8 +24,9 @@
 .row > [class^="col-"] {
   padding-top: 12px;
   padding-bottom: 12px;
+  /*
   background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  border: 1px solid rgba(86, 61, 124, 0.2);*/
 }
 
 html {
@@ -52,8 +53,14 @@ video {
   vertical-align: middle;
 }
 
+p {
+  font-family: roboto;
+}
+
 .page-header {
-  background: #ac8968;
+  background: url(../img/accueil.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -62,6 +69,14 @@ h1 {
   font-family: Catchye Demo;
   font-weight: 700;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.46);
+}
+
+@import "modules/_menu.css";
+
+@media (min-width: 992px) {
+  .burger {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -73,12 +88,7 @@ h1 {
 @media (min-width: 1200px) {
   h1 {
     font-size: 70px;
-  }
-}
-
-@media (min-width: 992px) {
-  .burger {
-    display: none;
+    padding-top: 70px;
   }
 }
 
@@ -89,21 +99,79 @@ h2 {
   font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   h2 {
     font-size: 60px;
+    text-align: center;
   }
 }
 
 @media (min-width: 1200px) {
   h2 {
     font-size: 70px;
+    text-align: left;
+  }
+}
+
+#myCarousel {
+  width: 400px;
+}
+.caption-animate .item.active .carousel-caption {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.caption-animate .item.active .carousel-caption.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.caption-animate .item.active .carousel-caption.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.caption-animate .item.active .carousel-caption.flipOutX,
+.caption-animate .item.active .carousel-caption.flipOutY,
+.caption-animate .item.active .carousel-caption.bounceIn,
+.caption-animate .item.active .carousel-caption.bounceOut {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+}
+.caption-animate .item .carousel-caption.fadeIn,
+.caption-animate .item .carousel-caption.fadeInDown,
+.caption-animate .item .carousel-caption.fadeInDownBig,
+.caption-animate .item .carousel-caption.fadeInLeft,
+.caption-animate .item .carousel-caption.fadeInLeftBig,
+.caption-animate .item .carousel-caption.fadeInRight,
+.caption-animate .item .carousel-caption.fadeInRightBig,
+.caption-animate .item .carousel-caption.fadeInUp,
+.caption-animate .item .carousel-caption.fadeInUpBig {
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  .photos-chats-large {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .petit-non {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-chat {
+    display: none;
   }
 }
 
 .grand-rectangle-apropos {
   border-radius: 64px;
-  background: var(--primair-site, rgba(191, 146, 104, 0.62));
+  background: rgba(191, 146, 104, 0.62);
   padding: 81px 47px;
 }
 
@@ -121,7 +189,60 @@ h2 {
 
 .grand-rectangle-apropos p {
   color: #fff;
-  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41px;
+}
+
+.second-rectangle-apropos {
+  border-radius: 64px;
+  background: rgba(191, 146, 104, 0.62);
+  padding: 81px 47px;
+}
+
+.second-rectangle-apropos p {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41px;
+}
+
+.troisieme-rectangle-apropos {
+  border-radius: 64px;
+  background: rgba(191, 146, 104, 0.62);
+  padding: 81px 47px;
+}
+
+.troisieme-rectangle-apropos p {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 41px;
+}
+
+.quatrieme-rectangle-apropos {
+  border-radius: 64px;
+  background: rgba(191, 146, 104, 0.62);
+  padding: 54px 31px;
+}
+
+@media (min-width: 768px) {
+  .quatrieme-rectangle-apropos {
+    padding: 35px 47px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quatrieme-rectangle-apropos {
+    padding: 81px 47px;
+  }
+}
+
+.quatrieme-rectangle-apropos p {
+  color: #fff;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -135,4 +256,118 @@ h2 {
     #ffe0c3 50%,
     #9b7451 100%
   );
+}
+
+.carousel {
+  position: relative;
+  margin-top: 26px;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 40px;
+  height: 40px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 40px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.carousel-bullet {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 35px;
+}
+
+.carousel-bullet:hover {
+  color: #ac8968;
+}
+
+#carousel-1:checked
+  ~ .control-1
+  ~ .carousel-indicators
+  li:nth-child(1)
+  .carousel-bullet,
+#carousel-2:checked
+  ~ .control-2
+  ~ .carousel-indicators
+  li:nth-child(2)
+  .carousel-bullet,
+#carousel-3:checked
+  ~ .control-3
+  ~ .carousel-indicators
+  li:nth-child(3)
+  .carousel-bullet {
+  color: #9b7451;
 }
