@@ -113,48 +113,14 @@ h2 {
   }
 }
 
-#myCarousel {
-  width: 400px;
-}
-.caption-animate .item.active .carousel-caption {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-.caption-animate .item.active .carousel-caption.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
+.animated-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 
-.caption-animate .item.active .carousel-caption.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
-.caption-animate .item.active .carousel-caption.flipOutX,
-.caption-animate .item.active .carousel-caption.flipOutY,
-.caption-animate .item.active .carousel-caption.bounceIn,
-.caption-animate .item.active .carousel-caption.bounceOut {
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-}
-.caption-animate .item .carousel-caption.fadeIn,
-.caption-animate .item .carousel-caption.fadeInDown,
-.caption-animate .item .carousel-caption.fadeInDownBig,
-.caption-animate .item .carousel-caption.fadeInLeft,
-.caption-animate .item .carousel-caption.fadeInLeftBig,
-.caption-animate .item .carousel-caption.fadeInRight,
-.caption-animate .item .carousel-caption.fadeInRightBig,
-.caption-animate .item .carousel-caption.fadeInUp,
-.caption-animate .item .carousel-caption.fadeInUpBig {
-  opacity: 0;
-}
-
-@media (max-width: 700px) {
-  .photos-chats-large {
-    display: none;
-  }
+  background-image: radial-gradient(#9b7451, #ffe0c3 90%);
+  background-repeat: no-repeat;
+  background-size: 600% 600%;
+  background-position: 50% 50%;
 }
 
 @media (max-width: 1000px) {
@@ -163,10 +129,31 @@ h2 {
   }
 }
 
+@media (max-width: 700px) {
+  .photos-chats-large {
+    display: none;
+  }
+}
+
+.photos-chats-large {
+  justify-content: center;
+}
+
 @media (min-width: 768px) {
   .carousel-chat {
     display: none;
   }
+}
+
+.rectangle-grande-infos {
+  border-radius: 64px;
+  background: #ac8968;
+  padding: 50px 30px;
+  margin: 15px;
+}
+
+.rectangle-grande-infos p {
+  color: white;
 }
 
 .grand-rectangle-apropos {
@@ -247,6 +234,23 @@ h2 {
   font-style: normal;
   font-weight: 500;
   line-height: 41px;
+}
+
+@media (max-width: 1000px) {
+  .petit-semainier {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .petit-semainier {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .boutton-horaire {
+    display: none;
+  }
 }
 
 .page-footer {
