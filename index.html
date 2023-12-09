@@ -6,30 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap-grid.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <div class="row">
-          <div
-            class="frame-burger"
-            class="col-4 offset-8 col-lg-12 offset-lg-0"
-          >
-            <div class="burger">
-              <div></div>
-              <div></div>
-              <div></div>
+          <div class="col-4 offset-8 col-lg-12 offset-lg-0">
+            <div class="nav-big">
+              <div class="container-menu">
+                <a href="#menu">Menu</a>
+                <a href="#noschats">Nos Chats</a>
+                <a href="#horaire">Horaire</a>
+                <a href="#apropos">À Propos</a>
+              </div>
             </div>
-            <div class="menu">
-              <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Nos Chats</a></li>
-                <li><a href="#">Horaire</a></li>
-              </ul>
+          </div>
+          <div class="topnav">
+            <a href="#home"></a>
+            <div id="myLinks">
+              <a href="#menu">Menu</a>
+              <a href="#noschats">Nos Chats</a>
+              <a href="#horaire">Horaire</a>
+              <a href="#apropos">À Propos</a>
             </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
           </div>
           <div class="col-6 col-lg-3">
             <img
+              class="logo-chat"
               src="/img/logo chat.png"
               alt="le logo de la marque, un chat dessiné orange"
             />
@@ -43,10 +54,45 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-12">
-          <h2 class="animated-text">M e n u</h2>
+          <h2 id="menu" class="animated-text">M e n u</h2>
         </div>
-        <div class="col-12 col-lg-7">
-          <div>carousel</div>
+        <div class="col-12 col-lg-6">
+          <div>
+            <div class="carousel-menu">
+              <div class="card-container">
+                <div class="card">
+                  <img
+                    src="img/nourriture 1.jpg"
+                    alt="photo des plats et café du menu du café"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    src="img/nourriture2.jpg"
+                    alt="photo des plats et café du menu du café"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    src="img/nourriture 1.jpg"
+                    alt="photo des plats et café du menu du café"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    src="img/nourriture2.jpg"
+                    alt="photo des plats et café du menu du café"
+                  />
+                </div>
+                <div class="card">
+                  <img
+                    src="img/nourriture2.jpg"
+                    alt="photo des plats et café du menu du café"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <img
             class="petit-non"
             src="img/nourriture 1.jpg"
@@ -60,11 +106,10 @@
             alt="photo des plats et café du menu du café"
           />
         </div>
-        <div class="col-12 col-lg-12">naviguer</div>
       </div>
       <div class="row">
         <div class="col-12 col-lg-12">
-          <h2 class="animated-text">Nos Chats</h2>
+          <h2 id="noschats" class="animated-text">Nos Chats</h2>
         </div>
         <div class="col-12 col-lg-6">
           <img class="photos-chats-large" src="img/chat1.jpg" alt="chat" />
@@ -156,7 +201,7 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-6">
-          <h2 class="animated-text">Horaire</h2>
+          <h2 id="horaire" class="animated-text">Horaire</h2>
           <div class="rectangle-grande-infos">
             <div class="semainier">
               <p>
@@ -189,7 +234,7 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-12">
-          <h2 class="animated-text">À Propos</h2>
+          <h2 id="apropos" class="animated-text">À Propos</h2>
         </div>
         <div class="col-12 col-lg-12">
           <div class="grand-rectangle-apropos">
@@ -221,7 +266,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-4 order-lg-1">
-            <button class="boutton-horaire">horaire</button>
+            <button href="#horaire" class="boutton-horaire">horaire</button>
             <div class="petit-semainier">
               <div class="semainier">
                 <p>
@@ -246,22 +291,24 @@
             <button>réserver</button>
           </div>
           <div class="col-6 offset-3 col-lg-4 offset-lg-0">
-            <img
-              src="img/instagram.png"
-              alt="rajouter un lien en appuyant sur le logo - logo instagram"
-            />
-            <img
-              src="img/twitter.png"
-              alt="rajouter un lien en appuyant sur le logo - logo twitter"
-            />
-            <img
-              src="img/facebook.png"
-              alt="rajouter un lien en appuyant sur le logo - logo facebook"
-            />
-            <img
-              src="img/youtube.png"
-              alt="rajouter un lien en appuyant sur le logo - logo youtube"
-            />
+            <div class="container-reseaux">
+              <img
+                src="img/instagram.png"
+                alt="rajouter un lien en appuyant sur le logo - logo instagram"
+              />
+              <img
+                src="img/twitter.png"
+                alt="rajouter un lien en appuyant sur le logo - logo twitter"
+              />
+              <img
+                src="img/facebook.png"
+                alt="rajouter un lien en appuyant sur le logo - logo facebook"
+              />
+              <img
+                src="img/youtube.png"
+                alt="rajouter un lien en appuyant sur le logo - logo youtube"
+              />
+            </div>
           </div>
         </div>
         <div class="row">
