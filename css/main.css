@@ -262,6 +262,12 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .catalogue-chat {
+    display: none;
+  }
+}
+
 .rectangle-grande-infos {
   display: flex;
   justify-content: space-around;
@@ -391,8 +397,16 @@ a {
   margin: 15px;
 }
 
+@media (min-width: 768px) {
+  .container-reseaux {
+    margin: 0px 130px;
+    padding: 30px;
+  }
+}
+
 .container-reseaux img {
-  margin: 10px;
+  width: 50%;
+  padding: 10px;
 }
 
 .carousel {
@@ -422,11 +436,28 @@ button {
   padding: 15px 32px;
   font-family: roboto;
   position: relative;
+  background-color: transparent;
   font-weight: 700;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   cursor: pointer;
+  border: #9b7451 3px solid;
+  box-shadow: 3px 3px 6px grey;
+}
+
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
+.boutton-horaire {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.button-reserver {
+  margin: 100px;
 }
 
 .carousel-inner {
